@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Front End Developer </title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div class="quiz-container">
+        <div class="inner-div">
+            <div class="top-bar flex">
+                <div class="que-sub">
+                    <div class="lang-logo"><i class="fa-solid fa-code"></i></div>
+                    <p>HTML</p>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fa-regular fa-sun"></i>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <i class="fa-regular fa-moon"></i>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="left">
+                    <div class="front-screen">
+                        <div class="inner-front">
+                            <h2>Welcome to the</h2>
+                            <h2>Frontend Quiz!</h2>
+                        </div>
+                        <p>Pick a subject to get started.</p>
+                    </div>
+                    <div class="question-screen1">
+                        <div class="question-screen">
+                            <div class="que-statement">
+                                <p class="que-count">Question 1 of 5</p>
+                                <p class="question">Which of these color contrast ratios defines the minimum WCAG 2.1
+                                    Level
+                                    AA
+                                    requirement for normal text?</p>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right answer">
+                    <div class="front-screen" id="subject">
+                    </div>
+                    <div class="question-screen">
+
+                        <div class="question-screen1">
+                            <div class="ans-option"> <input type="radio" id="ans1" class="radioBtn" name="answer">
+                                <label for="ans1">
+                                    <div class="option">A</div>
+                                    <p>HTML</p>
+                                </label>
+                            </div>
+                            <div class="ans-option"> <input type="radio" id="ans2" class="radioBtn" name="answer">
+                                <label for="ans2">
+                                    <div class="option">B</div>
+                                    <p>CSS</p>
+                                </label>
+                            </div>
+                            <div class="ans-option"> <input type="radio" id="ans3" class="radioBtn" name="answer">
+                                <label for="ans3">
+                                    <div class="option">C</div>
+                                    <p>Javascript</p>
+                                </label>
+                            </div>
+                            <div class="ans-option"> <input type="radio" id="ans4" class="radioBtn" name="answer">
+                                <label for="ans4">
+                                    <div class="option">D</div>
+                                    <p>Accessability</p>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="purple-btn">Submit answer</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
