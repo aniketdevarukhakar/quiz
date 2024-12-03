@@ -136,7 +136,7 @@ let topBar = document.querySelector(".top-bar .que-sub");
 let subjectList = '';
 quiz.forEach((data, idx) => {
 
-    subjectList += `<button class="que-sub" data-index="${idx}" >
+    subjectList += `<button class="que-sub animateRight" data-index="${idx}" >
                             <div class="lang-logo"><i class="${data.subjectIcon}"></i></div>
 ${data.subject}</button>`;
 });
@@ -182,7 +182,7 @@ subjectBtn.forEach((button) => {
 
             const escapedOption = option.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-            sortedOptions += `<div class="ans-option">
+            sortedOptions += `<div class="ans-option animateRight">
                                 <input type="radio" id="ans-${optionIdx}" class="radioBtn" name="answer">
                                 <label for="ans-${optionIdx}">
                                     <div class="option">${String.fromCharCode(65 + optionIdx)}</div>
