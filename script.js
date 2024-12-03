@@ -132,6 +132,7 @@ let optionsDiv = document.querySelector(".answer .question-screen1");
 let questionDiv = document.querySelector(".question");
 
 let topBar = document.querySelector(".top-bar .que-sub");
+let progress = document.querySelector(".progress-bar");
 
 let subjectList = '';
 quiz.forEach((data, idx) => {
@@ -150,35 +151,27 @@ subjectBtn.forEach((button) => {
 
         topBar.style.opacity = "1";
         topBar.style.visibility = "visible";
+        progress.style.display = "block";
 
         homeScreen.forEach((screen) => {
             screen.style.display = "none";
         })
 
         questionScreen.forEach((questions, idx) => {
-            // console.log(questions);
             questions.style.display = "flex";
         })
-        // homeScreen.style.display = "none";F
-        // console.log(e.target);
         const subjectIdx = e.target.closest('button').getAttribute("data-index");
-
+       
         quizList = quiz[subjectIdx].questions;
-
+       
         let questionList = "";
-
         quizList.forEach((question) => {
-            // console.log(i++)
             questionList = question.options;
             questionDiv.innerText = question.question;
         })
 
-        // console.log(questionList);
-
         let sortedOptions = "";
         questionList.forEach((option, optionIdx) => {
-            // console.log(option)
-
 
             const escapedOption = option.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
@@ -192,7 +185,18 @@ subjectBtn.forEach((button) => {
         });
 
         optionsDiv.innerHTML = sortedOptions;
-        // console.log(questionList);
 
+        let ansOptions = document.querySelectorAll('.ans-option');
+
+        ansOptions.forEach(option => {
+            option.addEventListener('click', () => {
+
+                ansOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+            });
+        });
     })
 })
+
+
+
