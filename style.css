@@ -503,7 +503,7 @@ label p {
    }  */
 
 
-.animateRight {
+/* .animateRight {
     opacity: 0;
     transform: translateX(100%); 
     animation: slideIn 1s ease-out forwards;
@@ -564,7 +564,7 @@ label p {
         opacity: 1;
         transform: translateX(0);
     }
-}
+} */
 
 
 @media screen and (min-width: 768px) and (max-width: 1000px) {
