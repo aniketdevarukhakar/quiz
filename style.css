@@ -616,7 +616,7 @@ label p {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
     .main-content {
         flex-direction: column;
     }
