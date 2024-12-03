@@ -132,6 +132,9 @@ let optionsDiv = document.querySelector(".answer .question-screen1");
 let questionDiv = document.querySelector(".question");
 
 let topBar = document.querySelector(".top-bar .que-sub");
+let progress = document.querySelector(".progress-bar");
+
+console.log(progress)
 
 let subjectList = '';
 quiz.forEach((data, idx) => {
@@ -150,6 +153,7 @@ subjectBtn.forEach((button) => {
 
         topBar.style.opacity = "1";
         topBar.style.visibility = "visible";
+        progress.style.display = "block";
 
         homeScreen.forEach((screen) => {
             screen.style.display = "none";
